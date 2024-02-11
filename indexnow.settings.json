@@ -1,1 +1,90 @@
+{
+	"last_run": 0,
+	"sites": [
+		{
+			"key": "your-indexnow-apikey-1234567890",
+			"basepath": "/opt/html/root/dir",
+			"url": "www.your.website.eu",
+			"last_files": [
+			]
+		}
+	],
+	"engines": [
+		{
+			"name": "IndexNow",
+			"url": "https://api.indexnow.org/indexnow?url=url-changed&key=your-key",
+			"include": [
+				"png",
+				"html",
+				"jpg",
+				"jpeg",
+				"pdf"
+			],
+			"exclude": [
+				"yandex_",
+				"BingSiteAuth"
+			]
+		},
+		{
+			"name": "Microsoft Bing",
+			"url": "https://www.bing.com/indexnow?url=url-changed&key=your-key",
+			"include": [
+				"png",
+				"html",
+				"jpg",
+				"jpeg",
+				"pdf"
+			],
+			"exclude": [
+				"yandex_",
+				"BingSiteAuth"
+			]
+		},
+		{
+			"name": "Naver",
+			"url": "https://searchadvisor.naver.com/indexnow?url=url-changed&key=your-key",
+			"include": [
+				"png",
+				"html",
+				"jpg",
+				"jpeg",
+				"pdf"
+			],
+			"exclude": [
+				"yandex_",
+				"BingSiteAuth"
+			]
+		},
+		{
+			"name": "Yandex",
+			"url": "https://yandex.com/indexnow?url=url-changed&key=your-key",
+			"include": [
+				"png",
+				"html",
+				"jpg",
+				"jpeg",
+				"pdf"
+			],
+			"exclude": [
+				"yandex_",
+				"BingSiteAuth"
+			]
+		},
+		{
+			"name": "Seznam.cz",
+			"url": "https://search.seznam.cz/indexnow?url=url-changed&key=your-key",
+			"include": [
+				"png",
+				"html",
+				"jpg",
+				"jpeg",
+				"pdf"
+			],
+			"exclude": [
+				"yandex_",
+				"BingSiteAuth"
+			]
+		}
+	]
+}
 
