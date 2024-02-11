@@ -1,5 +1,21 @@
 #!/usr/bin/php
 <?php
+/**
+Creates a sitemap.xml which can be processed by a search engine. The file should not be placed in the web space, but in a directory next to it. The sitemap is generated again and again, the lastmod attribute uses the timestamp of the respective file. If no changes have been made, the sitemap is regenerated with the same content. 
+
+It is recommended to run the script as a CronJob.
+
+
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m     h       dom     mon     dow     command
+15      *       *       *       *       /opt/scripts/bash/fileutils/create.sitemap.php /opt/prod/boredoc-web-static/ https://boredoc.eu /opt/prod/boredoc-web-static/sitemap.xml
+
+*/
 function createSitemap($dir, $domain, $outputFile) {
     $xml = new DOMDocument('1.0', 'UTF-8');
     $xml->formatOutput = true;
@@ -60,8 +76,9 @@ function toUrl($domain, $dir, $file){
     return $url;
 }
 
+// Obtain directory via command line parameters
 if ($argc < 3) {
-    echo "Please enter the directory, the domain and the full output path for the sitemap as command line parameters.\n";
+    echo "Please enter the directory, the domain and the output path for the sitemap as command line parameters.\n";
     exit(1);
 }
 
